@@ -23,18 +23,9 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    public void testData(){
-        CollectionAdressBook collBook = new CollectionAdressBook();
-        collBook.fillData();
-        collBook.printData();
-    }
 
 
     public static void main(String[] args) {
-        CollectionAdressBook collBook = new CollectionAdressBook();
-        collBook.fillData();
-        collBook.printData();
-
         launch(args);
 
     }

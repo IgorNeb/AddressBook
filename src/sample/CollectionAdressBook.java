@@ -33,14 +33,6 @@ public class CollectionAdressBook implements AdressBook{
         return personList;
     }
 
-    public void printData(){
-        int numb = 0;
-        System.out.println();
-        for(Person person: personList){
-            numb++;
-            System.out.println(numb +") "  + person.getName() +" "+ person.getTel());
-        }
-    }
 
     public void fillData(){
         personList.add(new Person("Andy", "45368463"));

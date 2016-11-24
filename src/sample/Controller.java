@@ -58,12 +58,41 @@ public class Controller {
         collAdress.getPersonList().addListener(new ListChangeListener<Person>() {
             @Override
             public void onChanged(Change<? extends Person> c) {
-                //countlable();
+                countlable();
             }
         }
         );
+        countlable();
 
     }
+
+    public void showDialog(ActionEvent av){
+
+        Object source = av.getSource();
+
+        if(!(source instanceof Button))
+            return;
+
+        Button click = (Button) source;
+
+        Person selectedP = (Person) teble.getSelectionModel().getSelectedItem();
+
+        switch (click.getId()){
+            case "btnAdd":
+                System.out.println("ADD" +selectedP);
+                break;
+            case "btnUp":
+                System.out.println("UPDATE" + selectedP);
+                break;
+            case "btnDell":
+                System.out.println("DELETE" + selectedP);
+                break;
+        }
+
+       }
+
+
+
 
     private void countlable(){
         lablsum.setText("Summ = " + collAdress.getPersonList().size());
